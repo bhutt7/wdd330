@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation API Tutorial</title>
+</head>
+<body>
+
+    <h2>JavaScript Geolocation</h2>
+    
+    <p>Click the button to get your coordinates.</p>
+    
+    <button onclick="getLocation()">Try It</button>
+    
+    <p id="demo"></p>
+
+    <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <script>
+    const x = document.getElementById("demo");
+    const y = document.querySelector("iframe");
+    
+    function getLocation() {
+      try {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } catch {
+        x.innerHTML = err;
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+      y.setAttribute("src", `https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2878.2381704128998!2d${position.coords.longitude}!3d${position.coords.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDQ5JzUxLjIiTiAxMTHCsDQ2JzM4LjYiVw!5e0!3m2!1sen!2sus!4v1684451750625!5m2!1sen!2sus`);
+    }
+    </script>
+    
+    </body>
+</html>
