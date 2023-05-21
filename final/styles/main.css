@@ -9,6 +9,10 @@
     --heading-fonts: Righteous, Georgia, 'Times New Roman', serif;
 }
 
+body {
+    margin: 0 auto;
+}
+
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -20,7 +24,6 @@ header {
     color: var(--light-text);
     height: 120px;
     padding: 20px;
-    border-radius: 15px;
     text-align: center;
 }
 
@@ -53,7 +56,7 @@ nav a {
 a {
     text-decoration: none;
     font-size: 1.6em;
-    padding: 8px;
+    padding: 10px;
     border-radius: 15px;
     font-family: var(--heading-fonts);
     background-color: #3761A8;
@@ -99,10 +102,17 @@ footer {
     font-size: 1.3em;
     padding: 15px;
     margin-top: 50px;
-    border-radius: 15px;
 }
 
 @media screen and (min-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    
+    header, footer {
+        border-radius: 15px;
+    }
+    
     h1 {
         text-align: left;
         font-size: 2.4em;
