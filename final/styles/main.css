@@ -64,10 +64,14 @@ a {
     display: inline-block;
 }
 
+main a {
+    margin-bottom: 20px;
+}
+
 .welcome {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
+    margin: 20px auto;
+    padding: 0 30px;
 }
 
 hr {
