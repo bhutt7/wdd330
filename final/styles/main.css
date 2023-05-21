@@ -95,6 +95,14 @@ hr {
     border-radius: 15px;
 }
 
+ul {
+    border: 1px dashed var(--primary-color);
+    width: 300px;
+    min-height: 100px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
 footer {
     background-color: var(--secondary-color);
     color: var(--light-text);
