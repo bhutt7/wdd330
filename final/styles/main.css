@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Righteous&display=swap');
+
+:root {
+    --main-bg-color: #f0f0f0;
+    --primary-color: #f00000;
+    --secondary-color: #222224;
+    --light-text: #ffde00;
+    --body-fonts: Barlow, Arial, Helvetica, sans-serif;
+    --heading-fonts: Righteous, Georgia, 'Times New Roman', serif;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    height: 120px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+h1 {
+    background-color: #3761A8;
+    font-size: 2em;
+    margin: 0 auto;
+    width: 270px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-fonts);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    margin: 10px 20px;
+    width: 100px;
+    text-align: center;
+    background-color: var(--light-text);
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6em;
+    padding: 8px;
+    border-radius: 15px;
+    font-family: var(--heading-fonts);
+    background-color: #3761A8;
+    color: var(--light-text);
+    display: inline-block;
+}
+
+.welcome {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+hr {
+    background-color: var(--primary-color);
+    height: 2px;
+}
+
+#search-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-bar input {
+    width: 250px;
+    height: 40px;
+    font-size: 25px;
+    margin: 10px;
+}
+
+#search-bar button {
+    height: 40px;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    height: 150px;
+    font-size: 1.3em;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        text-align: left;
+        font-size: 2.4em;
+        width: 322px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p.welcome {
+        font-size: 1.3em;
+    }
+}
