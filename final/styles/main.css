@@ -100,11 +100,21 @@ hr {
 }
 
 ul {
-    border: 1px dashed var(--primary-color);
+    border: 3px dashed var(--primary-color);
+    border-radius: 15px;
+    width: 200px;
+    min-height: 50px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+li {
+    padding: 5px;
+}
+
+.recent {
     width: 300px;
     min-height: 100px;
-    border-radius: 15px;
-    margin: 0 auto;
 }
 
 footer {
@@ -114,6 +124,37 @@ footer {
     font-size: 1.3em;
     padding: 15px;
     margin-top: 50px;
+    text-align: center;
+}
+
+/* Details */
+.name {
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+.display {
+    width: 75%;
+    max-width: 300px;
+    border: 10px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+#entry {
+    color: var(--primary-color);
+}
+
+.total {
+    border-top: 1px solid var(--secondary-color);
+    width: 150px;
+}
+
+.dimensions {
+    display: inline-block;
+    margin: 15px 15px;
+    padding: 10px;
+    border: 2px dashed var(--primary-color);
+    border-radius: 15px;
 }
 
 @media screen and (min-width: 600px) {
