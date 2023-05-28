@@ -11,6 +11,7 @@
 
 body {
     margin: 0 auto;
+    font-family: var(--body-fonts);
 }
 
 main {
@@ -29,9 +30,9 @@ header {
 
 h1 {
     background-color: #3761A8;
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0 auto;
-    width: 270px;
+    width: 260px;
     padding: 8px;
     border-radius: 15px;
 }
@@ -90,8 +91,13 @@ hr {
     width: 250px;
     height: 40px;
     font-size: 20px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 15px;
+}
+
+#search-bar input:focus {
+    transform: scale(1.1);
+    transition: .5s ease-out;
 }
 
 #search-bar button {
@@ -99,13 +105,14 @@ hr {
     border-radius: 15px;
 }
 
-ul {
+.recent, .data {
     border: 3px dashed var(--primary-color);
     border-radius: 15px;
     width: 200px;
-    min-height: 50px;
+    min-height: 32px;
     margin: 0 auto;
     text-align: left;
+    font-family: var(--body-fonts);
 }
 
 li {
@@ -113,7 +120,7 @@ li {
 }
 
 .recent {
-    width: 300px;
+    width: 200px;
     min-height: 100px;
 }
 
@@ -125,6 +132,37 @@ footer {
     padding: 15px;
     margin-top: 50px;
     text-align: center;
+}
+
+/* Browser */
+
+.pokemon-list {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: .7em;
+}
+
+.pokemon-list li {
+    list-style-type: none;
+}
+
+.pokemon-list a {
+    width: 200px;
+}
+
+.pokemon-list img {
+    width: 100px;
+}
+
+.new-page {
+    background-color: var(--light-text);
+    color: var(--secondary-color);
+    margin: 20px;
+}
+
+.hide {
+    display: none;
 }
 
 /* Details */
@@ -152,6 +190,7 @@ footer {
 .dimensions {
     display: inline-block;
     margin: 15px 15px;
+    margin-top: 0;
     padding: 10px;
     border: 2px dashed var(--primary-color);
     border-radius: 15px;
@@ -182,5 +221,9 @@ footer {
 
     p.welcome {
         font-size: 1.3em;
+    }
+
+    .recent {
+        width: 300px;
     }
 }
