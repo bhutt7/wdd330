@@ -63,7 +63,6 @@ function weak(typeOne, typeTwo) {
 }
 
 function findDuplicates(strong, weak) {
-    const dupes = strong.filter((type) => weak.includes(type))
-    console.log(dupes);
+    const dupes = strong.filter((type) => weak.includes(type));
     return dupes;
 }

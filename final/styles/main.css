@@ -12,6 +12,7 @@
 body {
     margin: 0 auto;
     font-family: var(--body-fonts);
+    background-color: var(--main-bg-color)
 }
 
 main {
@@ -65,8 +66,14 @@ a {
     display: inline-block;
 }
 
-main a {
+.browse {
     margin-bottom: 20px;
+}
+
+.pokemon-card a:hover {
+    transform: scale(1.2);
+    background-color: #264273;
+    transition: .3s ease-out .2s;
 }
 
 .welcome {
@@ -78,6 +85,7 @@ main a {
 hr {
     background-color: var(--primary-color);
     height: 2px;
+    border-radius: 15px;
 }
 
 #search-bar {
@@ -123,6 +131,19 @@ li {
     width: 200px;
     min-height: 100px;
     text-align: center;
+    font-size: .9em;
+    padding: 0 40px;
+}
+
+.recent li::marker {
+    font-size: 1.6em;
+}
+
+.recent a {
+    background-color: var(--main-bg-color);
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-family: var(--body-fonts);
 }
 
 footer {
@@ -139,8 +160,9 @@ footer {
 
 .pokemon-list {
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     font-size: .7em;
 }
 
@@ -152,6 +174,7 @@ footer {
 }
 
 .pokemon-card a {
+    margin: 10px;
     width: 200px;
     height: 100px;
     display: flex;
@@ -237,6 +260,8 @@ footer {
     }
 
     .recent {
-        width: 300px;
+        width: 200px;
+        font-size: 1.2em;
+        padding: 0 60px;
     }
 }
