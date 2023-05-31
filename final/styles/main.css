@@ -105,7 +105,7 @@ hr {
     border-radius: 15px;
 }
 
-.recent, .data {
+.recent, .data, .matchup {
     border: 3px dashed var(--primary-color);
     border-radius: 15px;
     width: 200px;
@@ -122,6 +122,7 @@ li {
 .recent {
     width: 200px;
     min-height: 100px;
+    text-align: center;
 }
 
 footer {
@@ -187,7 +188,6 @@ footer {
 
 .total {
     border-top: 1px solid var(--secondary-color);
-    width: 150px;
 }
 
 .dimensions {
@@ -197,6 +197,16 @@ footer {
     padding: 10px;
     border: 2px dashed var(--primary-color);
     border-radius: 15px;
+}
+
+.pokemon-details ul, .matchup {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.matchup b {
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 600px) {

@@ -16,3 +16,11 @@ export function formatUnit(number) {
     let string = number.toString();
     return string.slice(0, -1) + "." + string.slice(-1);
 }
+
+export function hasTwoTypes(pokemon) {
+    if (pokemon.types.length > 1) {
+        return true;
+    } else {
+        return false;
+    }
+}

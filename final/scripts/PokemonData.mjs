@@ -8,6 +8,25 @@ export default class PokemonData {
         return data;
     }
 
+    async getTypes() {
+        const response = await fetch(this.baseURL + "type");
+        const data = await response.json();
+        return data.results;
+    }
+
+    async getDamage(type) {
+        const list = await this.getTypes();
+        let typeNum;
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].name == type) {
+                typeNum = i + 1;
+            }
+        }
+        const response = await fetch(this.baseURL + `type/${typeNum}`);
+        const data = await response.json();
+        return data.damage_relations;
+    }
+
     async getList(page) {
         const offset = 30 * (page - 1);
         const response = await fetch(this.baseURL + `pokemon?offset=${offset}&limit=30`);

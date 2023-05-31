@@ -1,4 +1,4 @@
-import { formatName, formatUnit } from "./utils.mjs";
+import { formatName, formatUnit, hasTwoTypes } from "./utils.mjs";
 
 export default class PokemonDetails {
     constructor(name, dataSource) {
@@ -13,7 +13,6 @@ export default class PokemonDetails {
     }
 
     renderDetails(selector) {
-        console.log(this.pokemon);
         const element = document.querySelector(selector);
         element.insertAdjacentHTML("afterbegin", detailsTemplate(this.pokemon));
     }
@@ -43,7 +42,7 @@ function detailsTemplate(pokemon) {
                     <li>Sp. Attack: ${pokemon.stats[3].base_stat}</li>
                     <li>Sp. Defense: ${pokemon.stats[4].base_stat}</li>
                     <li>Speed: ${pokemon.stats[5].base_stat}</li>
-                    <li class="total">Base Stat Total: ${allStats}</li>
+                    <li class="total"><b>Base Stat Total: ${allStats}</b></li>
                 </ul>
                 <h3>Dimensions</h3>
                 <h4 class="dimensions">Height: ${height} m</h4>
@@ -52,7 +51,7 @@ function detailsTemplate(pokemon) {
 }
 
 function typeList(pokemon) {
-    if (pokemon.types.length > 1) {
+    if (hasTwoTypes(pokemon)) {
         return `<li>${formatName(pokemon.types[0].type.name)}</li>
         <li>${formatName(pokemon.types[1].type.name)}</li>`;
     } else {
