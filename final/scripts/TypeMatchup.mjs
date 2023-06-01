@@ -39,7 +39,7 @@ function strong(typeOne, typeTwo) {
     })
     if (Object.keys(typeTwo).length != 0) {
         typeTwo.double_damage_to.forEach((index) => {
-            if(!strong.includes(index.name)) {
+            if(!strong.includes(formatName(index.name))) {
                 strong.push(formatName(index.name));
             }
         })
