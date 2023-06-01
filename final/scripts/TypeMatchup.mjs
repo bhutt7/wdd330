@@ -54,7 +54,7 @@ function weak(typeOne, typeTwo) {
     })
     if (Object.keys(typeTwo).length != 0) {
         typeTwo.double_damage_from.forEach((index) => {
-            if(!weak.includes(index.name)) {
+            if(!weak.includes(formatName(index.name))) {
                 weak.push(formatName(index.name));
             }
         })
